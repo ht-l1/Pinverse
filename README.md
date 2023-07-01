@@ -81,7 +81,7 @@ Use the `BLANK_README.md` to get started. -->
 ### Built With
 MongoDB, Express, React, Node
 <!-- * [![React][React.js]][React-url] -->
-* [![MERN][MERN]][MERN]
+* [![MERN][MERN]][MERN|width=100]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
