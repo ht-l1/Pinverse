@@ -237,4 +237,4 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-[MERN]: https://allma.si/blog/wp-content/uploads/2020/08/mean-stack-1024x285.png
+[MERN]: https://www.imaginarycloud.com/blog/content/images/2023/03/MERN.webp
