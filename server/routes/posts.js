@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/', getPosts);
 router.post('/', createPost);
 router.get('/:id', getPost);
+// update existing document
 router.patch('/:id', updatePost);
 router.delete('/:id', deletePost);
 router.patch('/:id/likePost', likePost);
