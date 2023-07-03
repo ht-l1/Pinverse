@@ -25,4 +25,9 @@ export default makeStyles((theme) => ({
   buttonSubmit: {
     marginBottom: 10,
   },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '1rem',
+  }
 }));

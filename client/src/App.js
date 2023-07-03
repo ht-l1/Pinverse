@@ -26,9 +26,10 @@ const App = () => {
             <Typography className={classes.heading} variant="h2" align="center" style={{ fontWeight: 'bold', fontFamily: 'cursive', color: 'white' }}>Pinverse
             <img className={classes.image} src={memories} alt="icon" height="60" /></Typography>
           </AppBar>
+
           <Grow in>
             <Container>
-              <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+              <Grid className={classes.mainContainer} container justify="space-between" alignItems="stretch" spacing={3}>
                 <Grid item xs={12} sm={7}>
                   <Posts setCurrentId={setCurrentId} />
                 </Grid>
@@ -38,6 +39,15 @@ const App = () => {
               </Grid>
             </Container>
           </Grow>
+
+
+        {/* adding footer section */}
+      <footer className={classes.footer}>
+        <Typography variant="body2" color="textSecondary" align="center">
+          &copy; {new Date().getFullYear()} Pinverse. All rights reserved.
+        </Typography>
+      </footer>
+
         </Container>
       );
     };

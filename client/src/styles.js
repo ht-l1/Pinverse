@@ -1,8 +1,11 @@
-// import { makeStyles } from '@mui/styled-engine-sc';
-// import { makeStyles } from '@mui/styled-engine';
 import { makeStyles } from '@mui/styles';
 
-export default makeStyles (() => ({
+// fixing the new error: themeSpacing not a function
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
+
+export default makeStyles ((theme) => ({
+  
     appBar: {
         borderRadius: 15,
         margin: '30px 0',
@@ -17,4 +20,17 @@ export default makeStyles (() => ({
       image: {
         marginLeft: '15px',
       },
+
+      mainContainer: {
+        justifyContent: 'center',
+        [themeInstance.breakpoints.down('sm')]: {
+          flexDirection: 'column-reverse',
+        },
+      },
+
+      footer: {
+        padding: themeInstance.spacing(2),
+        marginTop: themeInstance.spacing(4), // Add margin top to separate the footer from the content
+      },
+
 }));

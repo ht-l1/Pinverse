@@ -16,6 +16,7 @@ const Form = ({ currentId, setCurrentId }) => {
       if (post) setPostData(post);
     }, [post]);
   
+    // reset the form back to CreateNew after submit a new/update post
     const clear = () => {
       setCurrentId(0);
       setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
@@ -36,14 +37,17 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper}>
         <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-          <Typography variant="h6" style={{ fontWeight: 'bold', fontFamily: 'cursive', color: '#FF69B4' }}>{currentId ? `Editing "${post.title}"` : 'New Post :)'}</Typography>
+          <Typography variant="h6" style={{ fontWeight: 'bold', fontFamily: 'cursive', color: '#FF69B4' }}>{currentId ? `Edit "${post.title}"` : 'New Post :)'}</Typography>
           <TextField name="creator" variant="outlined" label="What's your name?" fullWidth value={postData.creator} onChange={(e) => setPostData({ ...postData, creator: e.target.value })} />
           <TextField name="title" variant="outlined" label="Title for just a few words" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
           <TextField name="message" variant="outlined" label="Tell me more about everything!" fullWidth multiline rows={4} value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
           <TextField name="tags" variant="outlined" label="Tags (coma separated)" fullWidth value={postData.tags} onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })} />
           <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
-          <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" style={{ width: '30%', marginRight: '0.5vw' }}>Submit</Button>
-          <Button variant="contained" color="secondary" size="small" onClick={clear} style={{ width: '30%', marginLeft: '0.5vw'  }}>Clear</Button>
+         
+          <div className={classes.buttonContainer}>         
+            <Button className={classes.buttonSubmit} variant="contained" color="primary" size="small" type="submit" style={{ width: '100%', height: '80%', marginRight: '0.5vw' }}>Submit</Button>
+            <Button variant="contained" color="secondary" size="small" onClick={clear} style={{ width: '100%', height: '80%', marginLeft: '0.5vw'  }}>Clear</Button>
+          </div>
         </form>
       </Paper>
     );
