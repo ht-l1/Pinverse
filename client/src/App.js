@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@mui/material';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
@@ -10,12 +10,10 @@ import Auth from './components/Auth/Auth';
 
 const App = () => {
   return (
-  <GoogleOAuthProvider clientId={`${process.env.GOOGLE_API_TOKEN}`}>
+  // <GoogleOAuthProvider clientId={`${process.env.GOOGLE_API_TOKEN}`}>
     <BrowserRouter>
       <Container maxWidth="lg">
         <Navbar />
-
-        {/* Switch was replaced by Routes in react-router-dom v6 */}
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/auth" exact component={Auth} />
@@ -25,8 +23,8 @@ const App = () => {
       
       </Container>
     </BrowserRouter>
-  </GoogleOAuthProvider>
+
+  // </GoogleOAuthProvider>
   );
 };
-    
 export default App;
