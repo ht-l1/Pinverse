@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 // imported Dialog, DialogActions, DialogTitle for delete comfirmation box
 import { Card, CardActions, CardContent, CardMedia, Button, Typography, Dialog, DialogActions, DialogTitle } from '@mui/material';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
-import { useDispatch } from 'react-redux';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import { useDispatch } from 'react-redux';
 import moment from 'moment';
 
 import { likePost, deletePost } from '../../../actions/posts';

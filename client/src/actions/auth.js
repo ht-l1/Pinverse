@@ -1,3 +1,5 @@
+// these action creators are responsible for making API calls to handle user authentication (sign-in and sign-up) and dispatching the corresponding actions to update the Redux store.
+
 import { AUTH } from '../constants/actionTypes';
 import * as api from '../api/index.js';
 
@@ -24,22 +26,3 @@ export const signup = (formData, router) => async (dispatch) => {
     console.log(error);
   }
 };
-
-// trying with different codes below
-
-// import jwt_decode from 'jwt-decode';
-
-// export const createOrGetUser = async (response: any) => {
-//     const decoded : { name: string, picture: String, sub: string } = jwt_decode(response.credential);
-
-//     const { name, picture, sub } = decoded; 
-
-//     const user = {
-//         _id: sub,
-//         _type: 'user',
-//         userName: name,
-//         image: picture
-//     }
-
-//     await axios.post(`http://localhost:3000/api/auth`, user);
-// }

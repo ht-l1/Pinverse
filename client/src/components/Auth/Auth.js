@@ -1,66 +1,62 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@mui/material';
 import { useHistory } from 'react-router-dom';
-import { GoogleLogin } from 'react-google-login';
+// import { GoogleLogin, googleLogout  } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { GoogleOAuthProvider } from '@react-oauth/google';
+// import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import Icon from './icon'
 import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';
 import useStyles from './styles';
 import Input from './input';
-// import { GoogleLogin, googleLogin, googleLogout } from '@react-oauth/google';
-// import { createOrGetUser } from '../../api';
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: '' };
 
 const SignUp = () => {
+  const [form, setForm] = useState(initialState);
+  const [isSignup, setIsSignup] = useState(false);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const classes = useStyles();
 
-    const [form, setForm] = useState(initialState);
-    const [isSignup, setIsSignup] = useState(false);
-    const dispatch = useDispatch();
-    const history = useHistory();
-    const classes = useStyles();
+  const [showPassword, setShowPassword] = useState(false);
+  const handleShowPassword = () => setShowPassword(!showPassword);
 
-    const [showPassword, setShowPassword] = useState(false);
-    const handleShowPassword = () => setShowPassword(!showPassword);
+  const switchMode = () => {
+    setForm(initialState);
+    setIsSignup((prevIsSignup) => !prevIsSignup);
+    setShowPassword(false);
+  };
 
-    const switchMode = () => {
-        setForm(initialState);
-        setIsSignup((prevIsSignup) => !prevIsSignup);
-        setShowPassword(false);
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-    
-        if (isSignup) {
-          dispatch(signup(form, history));
-        } else {
-          dispatch(signin(form, history));
-        }
-      };
-    
-      const googleSuccess = async (res) => {
-        const result = res?.profileObj;
-        const token = res?.tokenId;
-    
-        try {
-          dispatch({ type: AUTH, data: { result, token } });
-    
-          history.push('/');
-        } catch (error) {
-          console.log(error);
-        }
-      };
-    
-      const googleError = () => alert('Google Sign In was unsuccessful. Try again later');
-    
-      const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    if (isSignup) {
+      dispatch(signup(form, history));
+    } else {
+      dispatch(signin(form, history));
+    }
+  };
 
+  const googleSuccess = async (res) => {
+    const result = res?.profileObj;
+    const token = res?.tokenId;
+
+    try {
+      dispatch({ type: AUTH, data: { result, token } });
+
+      history.push('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const googleError = () => alert('Google Sign In was unsuccessful. Try again later');
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   return (
     <Container component="main" maxWidth="xs">
@@ -85,8 +81,8 @@ const SignUp = () => {
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
 
-
-          <GoogleOAuthProvider clientId={`${process.env.GOOGLE_API_TOKEN}`}>
+          
+          <GoogleLogin
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In
@@ -95,10 +91,18 @@ const SignUp = () => {
             onSuccess={googleSuccess}
             onFailure={googleError}
             cookiePolicy="single_host_origin"
-          </GoogleOAuthProvider>
+          /> 
 
-
-
+          <GoogleLogin
+            onSuccess={credentialResponse => {
+              console.log(credentialResponse);
+            }}
+            onError={() => {
+              console.log('Login Failed');
+            }}
+            useOneTap
+          />;
+          
           <Grid container justify="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
