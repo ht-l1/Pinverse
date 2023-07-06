@@ -1,4 +1,8 @@
 import jwt from "jsonwebtoken";
+// import jwt_decode from 'jwt-decode';
+
+// User wants to like a post
+// click the like button => auth middleware(NEXT) => like controller
 
 const secret = 'test';
 

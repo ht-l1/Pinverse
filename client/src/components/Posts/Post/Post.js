@@ -23,6 +23,11 @@ const Post = ({ post, setCurrentId }) => {
       dispatch(deletePost(post._id));
       setShowDeleteConfirmation(false);
     };
+
+    const handleCancel = () => {
+      setShowDeleteConfirmation(false);
+    };
+
     // END of delete message
   
 
@@ -79,9 +84,10 @@ const Post = ({ post, setCurrentId }) => {
       <Card className={classes.card}>
         <CardMedia className={classes.media} image={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={post.title} />
         <div className={classes.overlay}>
-          <Typography variant="h6">{post.name}</Typography>
+          <Typography variant="h6" >{post.name}</Typography>
           <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
         </div>
+        
         {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
         <div className={classes.overlay2}>
           <Button onClick={() => setCurrentId(post._id)} style={{ color: 'white' }} size="small">
@@ -89,27 +95,34 @@ const Post = ({ post, setCurrentId }) => {
           </Button>
         </div>
         )}
+        
         <div className={classes.details}>
-          <Typography variant="body2" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
+          <Typography variant="body2" color="textSecondary" component="h2" style={{ fontFamily: 'open sans' }}>{post.tags.map((tag) => `#${tag} `)}</Typography>
         </div>
-        <Typography className={classes.title} gutterBottom variant="h5" component="h2">{post.title}</Typography>
+        <Typography className={classes.title} gutterBottom variant="h5" component="h2" style={{ fontFamily: 'open sans'}} fontWeight='bold'>{post.title}</Typography>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">{post.message}</Typography>
+          <Typography variant="body2" color="textSecondary" component="p" style={{ fontFamily: 'open sans'}}>{post.message}</Typography>
         </CardContent>
         <CardActions className={classes.cardActions}>
           <Button size="small" color="primary" disabled={!user?.result} onClick={() => dispatch(likePost(post._id))}>
             <Likes />
           </Button>
+
+          {/* show delete button depends on if the person is the poster */}
           {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
-          <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
+          
+
+          // original delete code
+          // <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
+          // <DeleteIcon fontSize="small" /> Delete
+          
+          // updated delete code to show the dialogue
+          <Button size="small" color="secondary" onClick={() => setShowDeleteConfirmation(true)}>
             <DeleteIcon fontSize="small" /> Delete
-          </Button>
-          )}
-        
-        </CardActions>
 
           {/* Delete confirmation dialog */}
-          <Dialog open={showDeleteConfirmation} onClose={() => setShowDeleteConfirmation(false)}>
+          {/* v1 */}
+          {/* <Dialog open={showDeleteConfirmation} onClose={() => setShowDeleteConfirmation(false)}>
             <DialogTitle>Are you sure you want to delete this post?</DialogTitle>
             <DialogActions>
               <Button onClick={() => setShowDeleteConfirmation(false)}>Cancel</Button>
@@ -117,14 +130,37 @@ const Post = ({ post, setCurrentId }) => {
                 Delete
               </Button>
             </DialogActions>
-          </Dialog>
+          </Dialog>  */}
+
+        {/* v2 that cancel does not work */}
+        {/* <Dialog open={showDeleteConfirmation} onClose={() => setShowDeleteConfirmation(false)}>
+          <DialogTitle>Are you sure you want to delete this post?</DialogTitle>
+          <DialogActions>
+            <Button onClick={() => setShowDeleteConfirmation(false)}>Cancel</Button>
+            <Button onClick={() => { dispatch(deletePost(post._id)); setShowDeleteConfirmation(false); }} color="primary" autoFocus>
+              Delete
+            </Button>
+          </DialogActions>
+        </Dialog> */}
+
+        <Dialog open={showDeleteConfirmation} onClose={handleCancel}>
+                <DialogTitle>Are you sure you want to delete this post?</DialogTitle>
+                <DialogActions>
+                  <Button onClick={handleCancel}>Cancel</Button>
+                  <Button onClick={handleDelete} color="primary" autoFocus>
+                    Delete
+                  </Button>
+                </DialogActions>
+              </Dialog>
+
+
+          </Button>
+          )}
+
+          </CardActions>
 
       </Card>
     );
   };
 
-
-
-
-  
   export default Post;

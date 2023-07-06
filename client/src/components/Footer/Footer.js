@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <footer className={classes.footer}>
-        <Typography variant="body2" color="textSecondary" align="center">
+        <Typography variant="body2" color="textSecondary" align="center" >
           &copy; {new Date().getFullYear()} Pinverse. All rights reserved.
         </Typography>
       </footer>

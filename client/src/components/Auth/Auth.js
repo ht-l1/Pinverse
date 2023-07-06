@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 // import { GoogleLogin, googleLogout  } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-// import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import Icon from './icon'
 import { signin, signup } from '../../actions/auth';
@@ -81,8 +80,10 @@ const SignUp = () => {
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
 
-          
-          <GoogleLogin
+
+          {/* original code */}
+
+            <GoogleLogin
             render={(renderProps) => (
               <Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
                 Google Sign In
@@ -91,17 +92,7 @@ const SignUp = () => {
             onSuccess={googleSuccess}
             onFailure={googleError}
             cookiePolicy="single_host_origin"
-          /> 
-
-          <GoogleLogin
-            onSuccess={credentialResponse => {
-              console.log(credentialResponse);
-            }}
-            onError={() => {
-              console.log('Login Failed');
-            }}
-            useOneTap
-          />;
+          />
           
           <Grid container justify="flex-end">
             <Grid item>

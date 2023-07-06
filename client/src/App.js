@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Container } from '@mui/material';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -10,9 +10,7 @@ import Auth from './components/Auth/Auth';
 const App = () => {
 
   return (
-    {/* <GoogleOAuthProvider clientId={`${process.env.GOOGLE_CLIENT_ID}`}> */}
-    {/* <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}> */}
-    <GoogleOAuthProvider clientId='CLIENTIDFROMENVHERE'>
+  <GoogleOAuthProvider clientId={`${process.env.REACT_APP_API_KEY}`}>
     <BrowserRouter>
       <Container maxWidth="lg">
         <Navbar />
@@ -25,7 +23,6 @@ const App = () => {
       
       </Container>
     </BrowserRouter>
-
   </GoogleOAuthProvider>
   );
 };
