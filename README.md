@@ -16,7 +16,7 @@
   </a> -->
 
   <h3 align="center">Pinverse</h3>
-
+  check out my deployed site <a href="https://pinverse.netlify.app/">/</a>
   <p align="center">
     A Full Stack MERN Project allowing user interactions
     <!-- <br />
