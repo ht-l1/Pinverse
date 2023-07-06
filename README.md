@@ -185,9 +185,14 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com) -->
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [GitHub Pages](https://pages.github.com) 
+* [Font Awesome](https://fontawesome.com) -->
+* [Material UI](https://mui.com/material-ui/getting-started/)
+* [React](https://react.dev/reference/react)
+* [MongoDB Atlas](https://www.mongodb.com/docs/atlas/getting-started/)
+* [Netlify](https://docs.netlify.com/)
+* [Render](https://render.com/)
+* [npm-doc-for-React-OAuth2](https://www.npmjs.com/package/@react-oauth/google)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
