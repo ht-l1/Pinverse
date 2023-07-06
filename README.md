@@ -16,10 +16,14 @@
   </a> -->
 
   <h3 align="center">Pinverse</h3>
-<div align="center">
-  check out my deployed site: https://pinverse.netlify.app/"
-  <p align="center">
+    <p align="center">
     A Full Stack MERN Project allowing user interactions
+<div align="center">
+  check out my deployed site: https://pinverse.netlify.app/
+<div align="center"><img width="639" alt="Index" src="https://github.com/ht-l1/Pinverse/assets/106502799/8520b323-05d3-4677-8ea3-69a6e8d9c6b2">
+<div align="center"><img width="648" alt="SignIn" src="https://github.com/ht-l1/Pinverse/assets/106502799/8f9da8dd-edf6-4b05-b2a1-e7f144bcbc75">
+<div align="center"><img width="639" alt="SignUp" src="https://github.com/ht-l1/Pinverse/assets/106502799/30591852-5786-496b-8969-7979b2a7cd9e">
+
     <!-- <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
