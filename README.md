@@ -9,7 +9,7 @@
  -->
 
 <!-- PROJECT LOGO -->
-<br />
+
 <!-- <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
@@ -19,17 +19,10 @@
     <p align="center">
     A Full Stack MERN Project allowing user interactions  </p>
 <div align="center">
-  check out my deployed site: https://pinverse.netlify.app/
-<div align="center"><img width="639" alt="Index" src="https://github.com/ht-l1/Pinverse/assets/106502799/8520b323-05d3-4677-8ea3-69a6e8d9c6b2">
-<div align="center"><img width="648" alt="SignIn" src="https://github.com/ht-l1/Pinverse/assets/106502799/8f9da8dd-edf6-4b05-b2a1-e7f144bcbc75">
-<div align="center"><img width="639" alt="SignUp" src="https://github.com/ht-l1/Pinverse/assets/106502799/30591852-5786-496b-8969-7979b2a7cd9e">
-
-    <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
-    <!-- <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a> -->
-    <!-- <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a> -->
-    <!-- <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a> -->
-
-</div>
+  check out my deployed site: https://pinverse.netlify.app/  </div>
+<div align="center"><img width="639" alt="Index" src="https://github.com/ht-l1/Pinverse/assets/106502799/8520b323-05d3-4677-8ea3-69a6e8d9c6b2"></div>
+<div align="center"><img width="648" alt="SignIn" src="https://github.com/ht-l1/Pinverse/assets/106502799/8f9da8dd-edf6-4b05-b2a1-e7f144bcbc75"></div>
+<div align="center"><img width="639" alt="SignUp" src="https://github.com/ht-l1/Pinverse/assets/106502799/30591852-5786-496b-8969-7979b2a7cd9e"></div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
