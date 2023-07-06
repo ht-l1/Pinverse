@@ -17,23 +17,18 @@
 
   <h3 align="center">Pinverse</h3>
     <p align="center">
-    A Full Stack MERN Project allowing user interactions
+    A Full Stack MERN Project allowing user interactions  </p>
 <div align="center">
   check out my deployed site: https://pinverse.netlify.app/
 <div align="center"><img width="639" alt="Index" src="https://github.com/ht-l1/Pinverse/assets/106502799/8520b323-05d3-4677-8ea3-69a6e8d9c6b2">
 <div align="center"><img width="648" alt="SignIn" src="https://github.com/ht-l1/Pinverse/assets/106502799/8f9da8dd-edf6-4b05-b2a1-e7f144bcbc75">
 <div align="center"><img width="639" alt="SignUp" src="https://github.com/ht-l1/Pinverse/assets/106502799/30591852-5786-496b-8969-7979b2a7cd9e">
 
-    <!-- <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p> -->
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a> -->
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a> -->
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a> -->
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -129,13 +124,13 @@ This is an example of how to list things you need to use the software and how to
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+<!-- ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -154,8 +149,6 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -164,11 +157,11 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Fork the Project
+Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+Push to the Branch (`git push origin feature/AmazingFeature`)
+Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,13 +177,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+<!-- ## Contact
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
@@ -205,8 +198,8 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com) -->
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+[Font Awesome](https://fontawesome.com)
+[React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
