@@ -1,8 +1,8 @@
 import { makeStyles } from '@mui/styles';
 
 // fixing the new error: themeXXX not a function
-import { createTheme } from '@mui/material/styles';
-const themeInstance = createTheme();
+import { ThemeProvider } from '@mui/material/styles';
+const themeInstance = ThemeProvider();
 
 export default makeStyles ((theme) => ({
 
