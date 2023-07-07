@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Container, Grow, Grid, Paper, AppBar, TextField, Button, Chip } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
-import ChipInput from '@mui/material';
 
 // import { getPosts } from '../../actions/posts';
 import { getPostsBySearch } from '../../actions/posts';
@@ -57,7 +56,7 @@ const Home = () => {
           <Grid item xs={12} sm={6} md={3}>
             <AppBar className={classes.appBarSearch} position="static" color="inherit">
               <TextField onKeyDown={handleKeyPress} name="search" variant="outlined" label="Search Memories" fullWidth value={search} onChange={(e) => setSearch(e.target.value)} />
-              <ChipInput
+              <Chip
                 style={{ margin: '10px 0' }}
                 value={tags}
                 onAdd={(chip) => handleAddChip(chip)}

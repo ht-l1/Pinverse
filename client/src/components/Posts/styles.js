@@ -1,11 +1,8 @@
 import { makeStyles } from '@mui/styles';
-import { deepPurple } from '@mui/material';
-
-// fixing the new error: themeSpacing not a function
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
-// const theme = createTheme();
+import { deepPurple } from '@mui/material/colors';
 
 export default makeStyles((theme) => ({
+
   mainContainer: {
     borderRadius: 15,
     margin: '30px 0',
@@ -70,4 +67,4 @@ export default makeStyles((theme) => ({
   actionDiv: {
     textAlign: 'center',
   },
-}));
+}))

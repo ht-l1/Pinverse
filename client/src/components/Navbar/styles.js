@@ -1,11 +1,8 @@
 import { makeStyles } from '@mui/styles';
 import { deepPurple } from '@mui/material/colors';
 
-// fixing the new error: themeXXX not a function
-// import { ThemeProvider } from '@mui/material/styles';
-// const themeInstance = ThemeProvider();
-
 export default makeStyles((theme) => ({
+
   appBar: {
     borderRadius: 15,
     margin: '30px 0',
@@ -63,4 +60,4 @@ export default makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
-}));
+}))

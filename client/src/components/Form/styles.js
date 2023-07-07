@@ -1,11 +1,7 @@
 import { makeStyles } from '@mui/styles';
 
-// fixing the new error: themeSpacing not a function
-// import { ThemeProvider } from '@mui/system';
-// import { ThemeProvider } from '@mui/material/styles';
-// const themeInstance = ThemeProvider();
-
 export default makeStyles((theme) => ({
+
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
@@ -26,4 +22,4 @@ export default makeStyles((theme) => ({
   buttonSubmit: {
     marginBottom: 10,
   },
-}));
+}))

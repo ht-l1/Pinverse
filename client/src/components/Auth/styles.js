@@ -1,34 +1,31 @@
 import { makeStyles } from '@mui/styles';
 
-// fixing the new error: themeXXX not a function
-import { ThemeProvider } from '@mui/material/styles';
-const themeInstance = ThemeProvider();
-
 export default makeStyles((theme) => ({
+  
   paper: {
-    marginTop: themeInstance.spacing(8),
+    marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: themeInstance.spacing(2),
+    padding: theme.spacing(2),
   },
   root: {
     '& .MuiTextField-root': {
-      margin: themeInstance.spacing(1),
+      margin: theme.spacing(1),
     },
   },
   avatar: {
-    margin: themeInstance.spacing(1),
-    backgroundColor: themeInstance.palette.secondary.main,
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: themeInstance.spacing(3),
+    marginTop: theme.spacing(3),
   },
   submit: {
-    margin: themeInstance.spacing(3, 0, 2),
+    margin: theme.spacing(3, 0, 2),
   },
   googleButton: {
-    marginBottom: themeInstance.spacing(2),
+    marginBottom: theme.spacing(2),
   },
-}));
+}))

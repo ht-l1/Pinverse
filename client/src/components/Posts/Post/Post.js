@@ -1,7 +1,7 @@
 // imported useState for delete comfirmation box
 import React, { useState } from 'react';
 // imported Dialog, DialogActions, DialogTitle for delete comfirmation box
-import { Card, CardActions, CardContent, CardMedia, Button, Typography, Dialog, DialogActions, DialogTitle } from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia, Button, ButtonBase, Typography, Dialog, DialogActions, DialogTitle } from '@mui/material';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
@@ -40,11 +40,11 @@ const Post = ({ post, setCurrentId }) => {
           ? (
             <><ThumbUpAltIcon fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}` }</>
           ) : (
-            <><ThumbUpAltOutlined fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1 ? 'Like' : 'Likes'}</>
+            <><ThumbUpAltOutlinedIcon fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1 ? 'Like' : 'Likes'}</>
           );
       }
   
-      return <><ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>;
+      return <><ThumbUpAltOutlinedIcon fontSize="small" />&nbsp;Like</>;
     };
   
     const openPost = (e) => {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { TextField, Button, Typography, Paper } from '@mui/material'
+import { TextField, Button, Typography, Paper, Chip } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 
@@ -8,7 +8,6 @@ import useStyles from './styles';
 
 // new
 import { useHistory } from 'react-router-dom';
-import ChipInput from 'material-ui-chip-input';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ title: '', message: '', tags: '', selectedFile: '' });
@@ -66,7 +65,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <TextField name="title" variant="outlined" label="Title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
         <TextField name="message" variant="outlined" label="Message" fullWidth multiline rows={4} value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
         <div style={{ padding: '5px 0', width: '94%' }}>
-          <ChipInput
+          <Chip
             name="tags"
             variant="outlined"
             label="Tags"
