@@ -22,10 +22,15 @@ const Form = ({ currentId, setCurrentId }) => {
     setPostData({ title: '', message: '', tags: '', selectedFile: '' });
   };
   
+  // useEffect(() => {
+  //   if (!post?.title) clear();
+  //   if (post) setPostData(post);
+  // }, [post]);
+
   useEffect(() => {
     if (!post?.title) clear();
     if (post) setPostData(post);
-  }, [post]);
+  }, [post, clear]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
