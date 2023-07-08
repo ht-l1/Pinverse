@@ -1,17 +1,17 @@
 // imported useState for delete comfirmation box
-import React, { useState } from 'react';
+import React from 'react';
 // imported Dialog, DialogActions, DialogTitle for delete comfirmation box
-import { Card, CardActions, CardContent, CardMedia, Button, ButtonBase, Typography, Dialog, DialogActions, DialogTitle } from '@mui/material';
+import { Card, CardActions, CardContent, CardMedia, Button, ButtonBase, Typography } from '@mui/material';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
-import InfoIcon from '@mui/icons-material';
+// import InfoIcon from '@mui/icons-material';
 import { useHistory } from 'react-router-dom';
 
-import { getPost, likePost, deletePost } from '../../../actions/posts';
+import { likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
 const Post = ({ post, setCurrentId }) => {
