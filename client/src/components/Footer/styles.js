@@ -1,14 +1,13 @@
 import { makeStyles } from '@mui/styles';
 
-// fixing the new error: themeXXX not a function
-// import { ThemeProvider } from '@mui/material/styles';
-// const themeInstance = ThemeProvider();
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
 
 export default makeStyles ((theme) => ({
 
 footer: {
-    padding: theme.spacing(2),
-    marginTop: theme.spacing(4), // Add margin top to separate the footer from the content
+    padding: themeInstance.spacing(2),
+    marginTop: themeInstance.spacing(4),
   },
 
 }));

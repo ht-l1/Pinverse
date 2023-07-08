@@ -1,6 +1,9 @@
 import { makeStyles } from '@mui/styles';
 import { deepPurple } from '@mui/material/colors';
 
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
+
 export default makeStyles((theme) => ({
 
   appBar: {
@@ -11,12 +14,12 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
-    [theme.breakpoints.down('sm')]: {
+    [themeInstance.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
   },
   heading: {
-    color: theme.palette.primary.main,
+    color: themeInstance.palette.primary.main,
     textDecoration: 'none',
     fontSize: '2em',
     fontWeight: 300,
@@ -29,7 +32,7 @@ export default makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end',
     width: '400px',
-    [theme.breakpoints.down('sm')]: {
+    [themeInstance.breakpoints.down('sm')]: {
       width: 'auto',
     },
   },
@@ -38,7 +41,7 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     width: '400px',
     alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
+    [themeInstance.breakpoints.down('sm')]: {
       width: 'auto',
       marginTop: 20,
       justifyContent: 'center',
@@ -57,7 +60,7 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
   },
   purple: {
-    color: theme.palette.getContrastText(deepPurple[500]),
+    color: themeInstance.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
 }))

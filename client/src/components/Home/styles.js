@@ -1,5 +1,8 @@
 import { makeStyles } from '@mui/styles';
 
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
+
 export default makeStyles((theme) => ({
   appBarSearch: {
     borderRadius: 4,
@@ -13,7 +16,7 @@ export default makeStyles((theme) => ({
     padding: '16px',
   },
   gridContainer: {
-    [theme.breakpoints.down('xs')]: {
+    [themeInstance.breakpoints.down('xs')]: {
       flexDirection: 'column-reverse',
     },
   },

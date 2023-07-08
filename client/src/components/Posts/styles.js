@@ -1,6 +1,9 @@
 import { makeStyles } from '@mui/styles';
 import { deepPurple } from '@mui/material/colors';
 
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
+
 export default makeStyles((theme) => ({
 
   mainContainer: {
@@ -38,13 +41,13 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
   },
   smMargin: {
-    margin: theme.spacing(1),
+    margin: themeInstance.spacing(1),
   },
   purple: {
-    color: theme.palette.getContrastText(deepPurple[500]),
+    color: themeInstance.palette.getContrastText(deepPurple[500]),
     backgroundColor: deepPurple[500],
   },
-  [theme.breakpoints.down('sm')]: {
+  [themeInstance.breakpoints.down('sm')]: {
     appBar: {
       padding: '10px 20px',
     },

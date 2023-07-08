@@ -5,8 +5,8 @@ import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
 // import memories from '../../images/star4.png';
-import memoriesLogo from '../../images/memoriesLogo.png';
-import memoriesText from '../../images/memoriesText.png';
+import memoriesLogo from '../../images/star4.png';
+import memoriesText from '../../images/pinverseText1.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
 
@@ -40,8 +40,9 @@ const Navbar = () => {
     return (
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Link to="/" className={classes.brandContainer}>
-          <img component={Link} to="/" src={memoriesText} alt="icon" height="45px" />
-          <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
+          {/* <img component={Link} to="/" src={memoriesText} alt="icon" height="45px" /> */}
+          <img component={Link} to="/" src={memoriesText} alt="icon" height="55px" />
+          <img className={classes.image} src={memoriesLogo} alt="icon" height="55px" />
         </Link>
         <Toolbar className={classes.toolbar}>
           {user?.result ? (

@@ -1,12 +1,16 @@
 import { makeStyles } from '@mui/styles';
 
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
+
 export default makeStyles((theme) => ({
 
-  [theme.breakpoints.down('sm')]: {
+  [themeInstance.breakpoints.down('sm')]: {
     mainContainer: {
       flexDirection: 'column-reverse',
     },
   },
+  
   appBar: {
     borderRadius: 15,
     margin: '30px 0',

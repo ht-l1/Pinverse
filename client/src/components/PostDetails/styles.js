@@ -1,5 +1,8 @@
 import { makeStyles } from '@mui/styles';
 
+import { createTheme } from '@mui/material/styles';
+const themeInstance = createTheme();
+
 export default makeStyles((theme) => ({
   media: {
     borderRadius: '20px',
@@ -11,7 +14,7 @@ export default makeStyles((theme) => ({
   card: {
     display: 'flex',
     width: '100%',
-    [theme.breakpoints.down('sm')]: {
+    [themeInstance.breakpoints.down('sm')]: {
       flexWrap: 'wrap',
       flexDirection: 'column',
     },
@@ -23,13 +26,13 @@ export default makeStyles((theme) => ({
   },
   imageSection: {
     marginLeft: '20px',
-    [theme.breakpoints.down('sm')]: {
+    [themeInstance.breakpoints.down('sm')]: {
       marginLeft: 0,
     },
   },
   recommendedPosts: {
     display: 'flex',
-    [theme.breakpoints.down('sm')]: {
+    [themeInstance.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
   },
