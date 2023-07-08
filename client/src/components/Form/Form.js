@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import { TextField, Button, Typography, Paper, Chip } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
@@ -17,15 +17,25 @@ const Form = ({ currentId, setCurrentId }) => {
   const user = JSON.parse(localStorage.getItem('profile'));
   const history = useHistory();
 
-  const clear = () => {
+  // const clear = () => {
+  //   setCurrentId(0);
+  //   setPostData({ title: '', message: '', tags: '', selectedFile: '' });
+  // };
+  
+  // useEffect(() => {
+  //   if (!post?.title) clear();
+  //   if (post) setPostData(post);
+  // }, [post]);
+
+  const clear = useCallback(() => {
     setCurrentId(0);
     setPostData({ title: '', message: '', tags: '', selectedFile: '' });
-  };
-  
+  }, [setCurrentId]);
+
   useEffect(() => {
     if (!post?.title) clear();
     if (post) setPostData(post);
-  }, [post]);
+  }, [post, clear]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
