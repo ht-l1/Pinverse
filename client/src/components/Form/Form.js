@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import { TextField, Button, Typography, Paper, Chip } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
-import FileBase from 'react-file-base64';
+// import FileBase from 'react-file-base64';
+import { FileBase } from 'react-file-base64';
 import { useHistory } from 'react-router-dom';
 
 import {createPost, updatePost} from '../../actions/posts';
