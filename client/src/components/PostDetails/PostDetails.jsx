@@ -5,6 +5,7 @@ import moment from 'moment';
 import { useParams, useHistory } from 'react-router-dom';
 
 import { getPost, getPostsBySearch } from '../../actions/posts';
+import CommentSection from './CommentSection';
 import useStyles from './styles';
 
 const Post = () => {

@@ -2,12 +2,11 @@ import React, {useState, useEffect, useCallback} from 'react';
 import { TextField, Button, Typography, Paper, Chip } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
+import { useHistory } from 'react-router-dom';
 
 import {createPost, updatePost} from '../../actions/posts';
 import useStyles from './styles';
 
-// new
-import { useHistory } from 'react-router-dom';
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ title: '', message: '', tags: '', selectedFile: '' });
