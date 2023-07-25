@@ -20,9 +20,9 @@
 <p>A Full Stack MERN Project allowing user to share stories and interact with each other</p>
 <div>check out my deployed site here: https://pinverse.netlify.app/  </div> 
 <p></p>
-<h4 align="center">Pinverse New Release</h3>
+<h5 align="center">New Release</h5>
 <div align="center"><img width="303" alt="main" src="https://github.com/ht-l1/Pinverse/assets/106502799/b499c62e-93e4-4c31-ae45-56007da7c949"></div>
-<h4 align="center">Pinverse Old Release</h3>
+<h5 align="center">Old Release</h5>
 <div align="center"><img width="303" alt="Index" src="https://github.com/ht-l1/Pinverse/assets/106502799/8520b323-05d3-4677-8ea3-69a6e8d9c6b2"></div>
 <!-- <div align="center"><img width="303" alt="SignIn" src="https://github.com/ht-l1/Pinverse/assets/106502799/8f9da8dd-edf6-4b05-b2a1-e7f144bcbc75"></div>
 <div align="center"><img width="303" alt="SignUp" src="https://github.com/ht-l1/Pinverse/assets/106502799/30591852-5786-496b-8969-7979b2a7cd9e"></div> -->
