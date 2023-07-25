@@ -12,6 +12,8 @@ export default makeStyles((theme) => ({
   },
   paper: {
     padding: themeInstance.spacing(2),
+    backgroundColor: '#181818',
+    color: '#B3B3B3',
   },
   form: {
     display: 'flex',
