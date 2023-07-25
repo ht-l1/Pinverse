@@ -9,11 +9,22 @@ export default makeStyles((theme) => ({
     marginBottom: '1rem',
     display: 'flex',
     padding: '16px',
+    backgroundColor: '#181818',
+    // color: '#B3B3B3',
+    color: '#B3B3B3',
+    '& .MuiButton-containedPrimary': {
+      backgroundColor: '#1A4C8B', 
+    },
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#B3B3B3" // Set the outline color to white
+    },
   },
   pagination: {
     borderRadius: 4,
     marginTop: '1rem',
     padding: '16px',
+    color: '#B3B3B3',
+    backgroundColor: '#181818',
   },
   gridContainer: {
     [themeInstance.breakpoints.down('xs')]: {

@@ -9,20 +9,26 @@ export default makeStyles((theme) => ({
     objectFit: 'cover',
     width: '100%',
     maxHeight: '600px',
-
+    backgroundColor: '#181818',
+    color: '#B3B3B3',
   },
   card: {
     display: 'flex',
     width: '100%',
+    color: '#B3B3B3',
     [themeInstance.breakpoints.down('sm')]: {
       flexWrap: 'wrap',
       flexDirection: 'column',
+    },
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#B3B3B3" // Set the outline color to white
     },
   },
   section: {
     borderRadius: '20px',
     margin: '10px',
     flex: 1,
+    color: '#B3B3B3',
   },
   imageSection: {
     marginLeft: '20px',
@@ -38,10 +44,14 @@ export default makeStyles((theme) => ({
   },
   loadingPaper: {
     display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', borderRadius: '15px', height: '39vh',
+    backgroundColor: '#181818',
   },
   commentsOuterContainer: {
     display: 'flex',
     justifyContent: 'space-between',
+    '& .MuiButton-containedPrimary': {
+      backgroundColor: '#1A4C8B', 
+    },
   },
   commentsInnerContainer: {
     height: '200px',

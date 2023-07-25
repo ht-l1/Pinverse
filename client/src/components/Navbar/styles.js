@@ -14,6 +14,8 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',
+    backgroundColor: '#282828',
+    // backgroundColor: '#181818',
     [themeInstance.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
@@ -35,6 +37,8 @@ export default makeStyles((theme) => ({
     [themeInstance.breakpoints.down('sm')]: {
       width: 'auto',
     },
+    '& .MuiButton-containedPrimary': {
+      backgroundColor: '#1A4C8B', }
   },
   profile: {
     display: 'flex',
