@@ -21,7 +21,7 @@
 <div>check out my deployed site here: https://pinverse.netlify.app/  </div> 
 <p></p>
 <div align="center">New Release</div>
-<div align="center"><img width="303" alt="main" src="https://github.com/ht-l1/Pinverse/assets/106502799/36ffb064-1845-46ac-b4f2-66a0ac3e30f8"></div>
+<div align="center"><img width="303" alt="main" src="https://github.com/ht-l1/Pinverse/assets/106502799/f70b7faf-deb9-4772-99d0-bd0d69076956"></div>
 <div align="center">Old Release</div>
 <div align="center"><img width="303" alt="Index" src="https://github.com/ht-l1/Pinverse/assets/106502799/8520b323-05d3-4677-8ea3-69a6e8d9c6b2"></div>
 <!-- <div align="center"><img width="303" alt="SignIn" src="https://github.com/ht-l1/Pinverse/assets/106502799/8f9da8dd-edf6-4b05-b2a1-e7f144bcbc75"></div>
