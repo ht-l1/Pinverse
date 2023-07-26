@@ -5,14 +5,15 @@ import { getPosts, getPostsBySearch, getPostsByCreator, getPost, createPost, upd
 const router = express.Router();
 import auth from "../middleware/auth.js";
 
-router.get('/creator', getPostsByCreator);
-router.get('/search', getPostsBySearch);
-router.get('/', getPosts);
-router.get('/:id', getPost);
+router.get('/creator', getPostsByCreator);    //fetch posts by creator
+router.get('/search', getPostsBySearch);      //search for posts
+router.get('/', getPosts);     //fetch all posts
+router.get('/:id', getPost);   //fetch a specific post by its ID
 
-router.post('/', auth,  createPost);
-router.patch('/:id', auth, updatePost);
-router.delete('/:id', auth, deletePost);
+//only authenticated users can create/update/delete/like posts, protected by auth middleware
+router.post('/', auth, createPost);       
+router.patch('/:id', auth, updatePost);   
+router.delete('/:id', auth, deletePost);  
 router.patch('/:id/likePost', auth, likePost);
 router.post('/:id/commentPost', commentPost);
 

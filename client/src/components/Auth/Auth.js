@@ -47,7 +47,9 @@ const SignUp = () => {
     try {
       dispatch({ type: AUTH, data: { result, token } });
 
+      // trying to fix google auth error 
       history.push('/');
+      // history.push('/posts');
     } catch (error) {
       console.log(error);
     }

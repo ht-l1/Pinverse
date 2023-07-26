@@ -11,7 +11,7 @@ import PostDetails from './components/PostDetails/PostDetails';
 import CreatorOrTag from './components/CreatorOrTag/CreatorOrTag';
 
 const App = () => {
-  const user = JSON.parse(localStorage.getItem('profile'));
+  // const user = JSON.parse(localStorage.getItem('profile'));
 
 return (
   <GoogleOAuthProvider clientId={`${process.env.REACT_APP_API_KEY}`}>
@@ -24,7 +24,13 @@ return (
         <Route path="/posts/search" exact component={Home} />
         <Route path="/posts/:id" exact component={PostDetails} />
         <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
-        <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
+        {/* try to fix the sign in page not working */}
+        {/* <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} /> */}
+        {/* first try - doesnt' work */}
+        {/* <Route path="/signin" exact component={() => (!user ? <Auth isSignup={false} /> : <Redirect to="/posts" />)} />
+        <Route path="/signup" exact component={() => (!user ? <Auth isSignup={true} /> : <Redirect to="/posts" />)} /> */}
+        {/* second try */}
+        <Route path="/auth" exact component={Auth} />
       </Switch>
       <Footer />
     </Container>
