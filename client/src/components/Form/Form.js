@@ -1,13 +1,12 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import { TextField, Button, Typography, Paper, Chip } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
-// import FileBase from 'react-file-base64';
-import { FileBase } from 'react-file-base64';
+import FileBase from 'react-file-base64';
+// import { FileBase } from 'react-file-base64';
 import { useHistory } from 'react-router-dom';
 
 import {createPost, updatePost} from '../../actions/posts';
 import useStyles from './styles';
-
 
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ title: '', message: '', tags: '', selectedFile: '' });
@@ -85,6 +84,7 @@ const Form = ({ currentId, setCurrentId }) => {
             onDelete={(chip) => handleDeleteChip(chip)}
           />
         </div>
+        {/* potential errors with filebase */}
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
         <Button className={classes.buttonSubmit} variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
         <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>

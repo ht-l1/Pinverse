@@ -19,6 +19,14 @@ export default makeStyles((theme) => ({
     [themeInstance.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },
+    '& .MuiButton-containedSecondary': {
+      background: 'linear-gradient(135deg, #311B92, #009688)',
+      color: '#B3B3B3',
+    },
+    '& .MuiButton-containedPrimary': {
+      background: 'linear-gradient(135deg, #311B92, #009688)',
+      color: '#B3B3B3',
+    },
   },
   heading: {
     color: themeInstance.palette.primary.main,

@@ -49,8 +49,12 @@ export default makeStyles((theme) => ({
   commentsOuterContainer: {
     display: 'flex',
     justifyContent: 'space-between',
+    // '& .MuiButton-containedPrimary': {
+    //   backgroundColor: '#1A4C8B', 
+    // },
     '& .MuiButton-containedPrimary': {
-      backgroundColor: '#1A4C8B', 
+      background: 'linear-gradient(135deg, #7B1FA2, #2196F3)',
+      color: '#B3B3B3',
     },
   },
   commentsInnerContainer: {

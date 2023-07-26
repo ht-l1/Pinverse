@@ -15,26 +15,23 @@ const App = () => {
 
 return (
   <GoogleOAuthProvider clientId={`${process.env.REACT_APP_API_KEY}`}>
-  <BrowserRouter>
-    <Container maxWidth="xl">
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={() => <Redirect to="/posts" />} />
-        <Route path="/posts" exact component={Home} />
-        <Route path="/posts/search" exact component={Home} />
-        <Route path="/posts/:id" exact component={PostDetails} />
-        <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
-        {/* try to fix the sign in page not working */}
-        {/* <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} /> */}
-        {/* first try - doesnt' work */}
-        {/* <Route path="/signin" exact component={() => (!user ? <Auth isSignup={false} /> : <Redirect to="/posts" />)} />
-        <Route path="/signup" exact component={() => (!user ? <Auth isSignup={true} /> : <Redirect to="/posts" />)} /> */}
-        {/* second try */}
-        <Route path="/auth" exact component={Auth} />
-      </Switch>
-      <Footer />
-    </Container>
-  </BrowserRouter>
+    <BrowserRouter>
+      <Container maxWidth="xl">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={() => <Redirect to="/posts" />} />
+          <Route path="/posts" exact component={Home} />
+          <Route path="/posts/search" exact component={Home} />
+          <Route path="/posts/:id" exact component={PostDetails} />
+          <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
+          {/* try to fix the sign in page not working */}
+          {/* <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} /> */}
+          {/* trying below to work */}
+          <Route path="/auth" exact component={Auth} />
+        </Switch>
+        <Footer />
+      </Container>
+    </BrowserRouter>
   </GoogleOAuthProvider>
 );
 };

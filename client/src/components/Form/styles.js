@@ -9,6 +9,19 @@ export default makeStyles((theme) => ({
     '& .MuiTextField-root': {
       margin: themeInstance.spacing(1),
     },
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#B3B3B3" // Set the outline color to white
+    },
+    '& .MuiButton-containedPrimary': {
+      background: 'linear-gradient(135deg, #69379c, #2196F3)',
+      color: '#B3B3B3',
+      borderRadius: '100px',
+      padding: '2px 16px',
+    },
+    '& .MuiButton-containedSecondary': {
+      backgroundColor: '#424242', 
+      borderRadius: '100px',
+    },
   },
   paper: {
     padding: themeInstance.spacing(2),
