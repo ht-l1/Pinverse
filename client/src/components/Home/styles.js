@@ -12,8 +12,12 @@ export default makeStyles((theme) => ({
     backgroundColor: '#181818',
     // color: '#B3B3B3',
     color: '#B3B3B3',
+    // '& .MuiButton-containedPrimary': {
+    //   backgroundColor: '#1A4C8B', 
+    // },
     '& .MuiButton-containedPrimary': {
-      backgroundColor: '#1A4C8B', 
+      background: 'linear-gradient(135deg, #69379c, #2196F3)',
+      color: '#B3B3B3',
     },
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
       borderColor: "#B3B3B3" // Set the outline color to white

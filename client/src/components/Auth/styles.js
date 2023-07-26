@@ -3,13 +3,16 @@ import { createTheme } from '@mui/material/styles';
 const themeInstance = createTheme();
 
 export default makeStyles((theme) => ({
-  
   paper: {
     marginTop: themeInstance.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: themeInstance.spacing(2),
+    backgroundColor: '#181818',
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#B3B3B3" // Set the outline color to white
+    },
   },
   root: {
     '& .MuiTextField-root': {
@@ -26,7 +29,7 @@ export default makeStyles((theme) => ({
   },
   submit: {
     margin: themeInstance.spacing(3, 0, 2),
-    
+    background: 'linear-gradient(135deg, #311B92, #009688)',
   },
   googleButton: {
     marginBottom: themeInstance.spacing(2),
