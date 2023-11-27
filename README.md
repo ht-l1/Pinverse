@@ -29,7 +29,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-## Pinverse
+## <img width="250" alt="main" src="https://github.com/ht-l1/Pinverse/assets/106502799/f223a3c7-d5ff-48e0-8ddf-68e5876de59f">
   <!-- <h3 align="center">Pinverse</h3> -->
 <p>A Full Stack MERN Project allowing user to share stories and interact with each other</p>
 <div>check out my deployed site here: https://pinverse.netlify.app/  </div> 
@@ -98,7 +98,7 @@ MongoDB, Express, React, Node
 
 
 <!-- GETTING STARTED -->
-## About This Project
+## How to Run
 
 To get a local copy up and running: 
 
