@@ -31,8 +31,9 @@
 
 ## <img width="250" alt="main" src="https://github.com/ht-l1/Pinverse/assets/106502799/f223a3c7-d5ff-48e0-8ddf-68e5876de59f">
   <!-- <h3 align="center">Pinverse</h3> -->
-<p>A Full Stack MERN Project allowing user to share stories and interact with each other</p>
-<div>check out my deployed site here: https://pinverse.netlify.app/  </div> 
+<p>A Full Stack MERN Project allowing user to share stories and interact with each other</p> 
+<div>check out my deployed site here: 🚀 pinverse.co  </div>  
+<!-- https://pinverse.netlify.app/   -->
 <p></p>
 <div align="center">New Release</div>
 <div align="center"><img width="303" alt="main" src="https://github.com/ht-l1/Pinverse/assets/106502799/f70b7faf-deb9-4772-99d0-bd0d69076956"></div>
