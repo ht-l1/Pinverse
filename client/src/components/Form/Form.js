@@ -1,16 +1,19 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { TextField, Button, Typography, Paper, Chip } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 // import { FileBase } from 'react-file-base64';
 import { useHistory } from 'react-router-dom';
 
-import {createPost, updatePost} from '../../actions/posts';
+import { createPost, updatePost } from '../../actions/posts';
 import useStyles from './styles';
 
 const Form = ({ currentId, setCurrentId }) => {
-  const [postData, setPostData] = useState({ title: '', message: '', tags: '', selectedFile: '' });
-  const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
+  const [postData, setPostData] = useState({ title: '', message: '', tags: [], selectedFile: '' });
+
+  // const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
+  const post = useSelector((state) => (currentId ? state.posts.posts.find((message) => message._id === currentId) : null));
+
   const dispatch = useDispatch();
   const classes = useStyles();
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -20,7 +23,7 @@ const Form = ({ currentId, setCurrentId }) => {
   //   setCurrentId(0);
   //   setPostData({ title: '', message: '', tags: '', selectedFile: '' });
   // };
-  
+
   // useEffect(() => {
   //   if (!post?.title) clear();
   //   if (post) setPostData(post);
@@ -28,13 +31,13 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const clear = useCallback(() => {
     setCurrentId(0);
-    setPostData({ title: '', message: '', tags: '', selectedFile: '' });
+    setPostData({ title: '', message: '', tags: [], selectedFile: '' });
   }, [setCurrentId]);
 
   useEffect(() => {
     if (!post?.title) clear();
     if (post) setPostData(post);
-  }, [post, clear]);
+  }, [post]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,8 +55,8 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
-        <p>Be part of the Pinverse community,</p> 
-        <p>Sign in to share and connect!</p>
+          <p>Be part of the Pinverse community,</p>
+          <p>Sign in to share and connect!</p>
         </Typography>
       </Paper>
     );
